@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,8 +19,9 @@ public class Card_Data {
         public static void main(String[] ags){
 
             Card card = new Card(1,Suit.HEARTS,"hearts",Card_Value.Three);
+            ArrayList<Card> cardlist = new ArrayList<>();
             System.out.println(Card_Value.Three.getValue());
-             Player player1 = new Player(5, "K",List);
+             Player player1 = new Player(5, "K",cardlist);
             System.out.println(player1);
         }
 }

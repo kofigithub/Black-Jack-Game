@@ -36,7 +36,5 @@ public class Player {
         return playercardlist;
     }
 
-   /* public void setPlayercardlist(List<Card> playercardlist) {
-        this.playercardlist = Arrays.asList(new Card(1, Suit.HEARTS, "hearts", Card_Value.Queen));
-    }*/
+
 }

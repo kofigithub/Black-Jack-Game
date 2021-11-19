@@ -1,27 +1,33 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.Collections;
 
 public class Card_Data {
+    static ArrayList<Card> deck = new ArrayList<>();
 
-        static List<Card> cardlist = Arrays.asList(
-        new Card(1, Suit.HEARTS, "hearts", Card_Value.Queen),
-        new Card(2, Suit.DIAMONDS, "diamonds", Card_Value.Two),
-        new Card(3, Suit.CLUBS, "clubs", Card_Value.Two),
-        new Card(4, Suit.SPADES, "spades", Card_Value.Two));
-    public static void getValues(int model_value) {
-
-        Card_Value values[] = Card_Value.values();
-
+    public static void shuffle(){
+        Collections.shuffle(deck);
     }
 
-        public static void main(String[] ags){
+        public static void main(String[] args){
 
-            Card card = new Card(1,Suit.HEARTS,"hearts",Card_Value.Three);
-            ArrayList<Card> cardlist = new ArrayList<>();
+         for (Suit suit : Suit.values()) {
 
-             Player player1 = new Player(5, "K",cardlist);
-           // System.out.println(player1);
-            System.out.println(Card_Value.Three.getValue());
+                for (CardValue cv : CardValue.values() ){
+                    deck.add(new Card(suit,cv,cv.getValue()));
+
+                }
+
+            }
+
+
+         shuffle();
+
+            for (Card c : deck){
+
+                System.out.println(c.getValue()+"   "+c.getSuit());
+                System.out.println("--------");
+            }
+
+
         }
 }

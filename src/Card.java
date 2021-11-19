@@ -1,15 +1,17 @@
 public class Card {
-    private int ID;
+
     private Suit suit;
-    private String label;
+    private CardValue cardValue;
+    private int value;
 
-    public int getID() {
-        return ID;
+
+    public Card( Suit suit,CardValue cardValue, int value) {
+
+        this.suit = suit;
+        this.cardValue = cardValue;
+        this.value = value;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
-    }
 
     public Suit getSuit() {
         return suit;
@@ -19,29 +21,25 @@ public class Card {
         this.suit = suit;
     }
 
-    public String getLabel() {
-        return label;
+    public CardValue getCardValue() {
+        return cardValue;
     }
 
-    public void setLabel(String label) {
-        this.label = label;
+    public void setCardValue(CardValue cardValue) {
+        this.cardValue = cardValue;
     }
 
-    public Card_Value getValue() {
+
+    public int getValue() {
         return value;
     }
 
-    public void setValue(Card_Value value) {
+    public void setValue(int value) {
         this.value = value;
     }
 
-    // private int value;
-    private Card_Value value;
 
-    public Card(int  ID, Suit suit, String label,Card_Value value) {
-        this.ID = ID;
-        this.suit = suit;
-        this.label = label;
-        this.value = value;
-    }
+
+
+
 }
